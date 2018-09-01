@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flat Music</title>
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="row">
+    <div class="col s7 m3 offset-m5 offset-s3  ">
+      <div class="card z-depth-5">
+        <div class="card-image">
+            <img id="cover" class="responsive-img" src="https://lastfm-img2.akamaized.net/i/u/770x0/b9a6848b458c70a87a1745e0db2fb065.jpg">        
+            <a onclick="M.toast({html: 'You favorited this song'})" class="btn-floating halfway-fab waves-effect waves-light pink pulse">
+                <i id="fav" class="material-icons">favorite</i>    
+            </a>
+            <a id="facebook" class="tooltipped btn-floating halfway-fab waves-effect waves-light indigo pulse" data-tooltip="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a id="facebook0" class="btn-floating halfway-fab waves-effect waves-light amber darken-4 pulse">
+                <i class="fab fa-soundcloud"></i>
+            </a>
+            <a id="facebook1" class="btn-floating halfway-fab waves-effect waves-light green accent-4 pulse">
+                <i class="fab fa-spotify"></i>
+            </a>          
+        </div>
+        <div class="card-content">
+            <h5 class="title"></h5>
+        </div>
+        <div class="card-action">
+          <form>
+                <p>
+                    <div class="row">
+                    <input class="col s10" type="range" id="duration" min="0" max="0">
+                    <span>
+                        <label class="right current"></label>
+                    </span>
+                    </input>
+                </div>
+                </p>
+              </form>
+        </div>
+        <div class="card-action">
+          <a ><i id="prev" class="material-icons">navigate_before</i></a>
+          <a ><i id="play" class="material-icons">play_circle_outline</i></a>
+          <a ><i id="next" class="material-icons">navigate_next</i></a>
+        </div>
+
+        <div class="card z-depth-5">
+            <div class="playlist col s12 no-padding">
+            <ul class="collection with-header grey lighten-4">
+                <li class="collection-header"><h5>Playlist</h5></li>
+                <li class="collection-item"><div>OMFG - Meant for You <a href="#!" class='secondary-content'>
+                    <i class="material-icons songPlay" data-link="omfg-meant-for-you.mp3" data-name='OMFG Meant for You'>play_arrow</i>
+                        </a>
+                    </div>
+                </li>
+                <li class="collection-item"><div>OMFG - I Love You<a href="#!" class='secondary-content'>
+                    <i class="material-icons songPlay" data-link="OMFG-I-Love-U.mp3" data-name='OMFG I Love You'>play_arrow</i>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  <script src="js/materialize.min.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script src="custom.js"></script>
+
+  <script>
+  $(document).ready(function(){
+    $('.tooltipped').tooltip()
+  })
+  </script>
+</body>
+</html>
